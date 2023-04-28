@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PaymentDetailService } from '../shared/payment-detail.service';
 
 @Component({
   selector: 'app-payment-detail',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   ]
 })
 export class PaymentDetailComponent {
+/**
+ *
+ */
+constructor(public service:PaymentDetailService) {
 
+}
+ngOnInit() {
+  this.service.refreshList();
+}
 }

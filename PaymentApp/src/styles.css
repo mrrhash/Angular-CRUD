@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+label{
+  font-size: larger;
+  font-weight: 500;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input.invalid{
+  border-color: red;
+}
+
