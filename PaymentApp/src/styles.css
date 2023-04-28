@@ -9,4 +9,17 @@ body{
 input.invalid{
   border-color: red;
 }
+form{
+  box-shadow:5px 5px 5px 5px rgb(209, 202, 202);
+  padding: 20px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.table-div{
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow:5px 5px 5px 5px rgb(209, 202, 202);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+}
 

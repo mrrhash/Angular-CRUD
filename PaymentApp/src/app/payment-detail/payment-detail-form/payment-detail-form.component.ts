@@ -19,10 +19,28 @@ export class PaymentDetailFormComponent {
 
   }
   onSubmitt(form:NgForm){
+    if(this.service.formData.paymentDetailId==0)
+    this.onInsert(form);
+    else
+    this.onUpdate(form);
+  }
+  onInsert(form:NgForm){
     this.service.postPaymentDetail().subscribe(
       res=>{
         form.form.reset();
         this.toastr.success('Submitted Successfully',"Payment Detail Register");
+        this.service.refreshList();
+      },
+      err=>{
+        console.log(err);
+      }
+    )
+  }
+  onUpdate(form:NgForm){
+    this.service.putPaymentDetail().subscribe(
+      res=>{
+        form.form.reset();
+        this.toastr.info('Updated Successfully',"Payment Detail Register");
         this.service.refreshList();
       },
       err=>{

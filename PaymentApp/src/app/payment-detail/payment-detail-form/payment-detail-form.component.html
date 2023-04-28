@@ -1,7 +1,7 @@
 <form novalidate #form="ngForm" (submit)="onSubmitt(form)">
   <input type="hidden" name="paymentDetailId" [value]="service.formData.paymentDetailId">
 
-  <div class="form-group mt-5">
+  <div class="form-group ">
   <label>CARD OWNER NAME</label>
   <input type="text" name="cardOwnerName"  placeholder="Full Name" class="form-control form-control-lg"
   name="cardOwnerName" #cardOwnerName="ngModel" [(ngModel)]="service.formData.cardOwnerName"
